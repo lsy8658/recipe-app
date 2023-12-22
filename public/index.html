@@ -3,85 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Food Recipe</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="text-gray-600 font-body">
+  <body class="text-gray-600 font-body bg-[url('/img/bg.jpg')] bg-cover">
     <div>
       <!-- content wrapper -->
-      <div>
-        <nav>
-          <div>
-            <h1 class="font-bold uppercase">
-              <a href="/" class="text-gray-900">Food Store</a>
-            </h1>
-          </div>
-          <ul>
-            <li class="text-gray-700 font-bold">
-              <a href="#">
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>About</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+
       <!-- end nav -->
-      <main class="px-16 py-6 bg-gray-300">
-        <div class="flex justify-center md:justify-end">
-          <a href="#" class="text-primary">Log in</a>
-          <a href="#" class="text-primary">Sign up</a>
+      <main class="px-6 py-6 md:px-16 md:py-6">
+        <div class="flex justify-center">
+          <div class="bg-green-300 w-6 h-10 rounded-tl-lg"></div>
+          <div class="bg-blue-300 w-6 h-4"></div>
+          <div class="bg-red-300 w-6 h-4"></div>
+          <div class="bg-blue-300 w-6 h-4"></div>
+          <div class="bg-green-300 w-6 h-10 rounded-tr-lg"></div>
         </div>
-
-        <div class="flex">
-          <div class="bg-green-500 w-6 h-10"></div>
-          <div class="bg-blue-500 w-6 h-7"></div>
-          <div class="bg-red-500 w-6 h-4"></div>
-        </div>
-        <header>
-          <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
-          <h3 class="text-2xl font-semibold">Store</h3>
-        </header>
-
-        <div>
-          <h4 class="font-bold mt-12 pb-2 border-b border-gray-500">
-            Latest Recipes
-          </h4>
-
-          <div class="foods mt-8">
-            <!-- cards go here -->
+        <div
+          class="bg-green-200 box-border p-7 rounded-lg max-w-[1200px] m-auto"
+        >
+          <header>
+            <h2
+              class="text-center pb-2 bg-green-300 text-gray-800 text-6xl font-semibold"
+            >
+              Recipe book
+            </h2>
+            <h3 class="pt-6 text-2xl font-semibold text-black">Store</h3>
             <div>
-              <img src="" alt="" />
-              <div>
-                <span>5 Bean Chilll stew</span>
-                <span>Recipe by Mario</span>
+              <div class="flex pt-4 gap-2">
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Please enter in English..."
+                  class="w-[80%] text-xl outline-none rounded-md h-8 indent-2.5"
+                />
+                <button
+                  id="searchBtn"
+                  class="w-[19%] rounded-md bg-blue-300 text-white hover:text-yellow-700"
+                >
+                  Search
+                </button>
               </div>
             </div>
-          </div>
+          </header>
 
-          <h4 class="font-bold mt-12 pb-2 border-b border-gray-500">
-            Most Popular
-          </h4>
+          <div class="flex flex-col md:flex-row">
+            <div class="flex-1 box-border px-3">
+              <h4 class="font-bold mt-12 pb-2 border-b border-gray-500">
+                Recipe list
+              </h4>
 
-          <div class="mt-8">
-            <!-- cards go here -->
-          </div>
+              <div class="foods">
+                <!-- cards go here -->
+              </div>
+              <div class="searchError mt-6 w-full"></div>
+            </div>
 
-          <div class="flex justify-center">
-            <div class="bg-secondary-100 text-secondary-200">Load more</div>
+            <div class="flex-1 box-border px-3">
+              <h4 class="font-bold mt-12 pb-2 border-b border-gray-500">
+                Today Food
+              </h4>
+              <div class="todayFood"></div>
+              <div class="flex justify-center">
+                <div
+                  class="text-[18px] md:text-[20px] cursor-pointer bg-orange-300 text-white hover:text-black rounded-b-md px-4"
+                  id="loadMore"
+                >
+                  Load more
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
     </div>
-    <script src="./index.js"></script>
+
+    <!-- 
+    <div id="google_translate_element" class="hd_lang"></div>
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "En",
+            includedLanguages:
+              "ko,zh-CN,zh-TW,ja,vi,th,tl,km,my,mn,ru,en,fr,ar",
+            //layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+     -->
+    <script src="./index.js" defer></script>
   </body>
 </html>
